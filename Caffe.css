@@ -1,0 +1,93 @@
+/* styling for Caffe web interface */
+/* importing Google Fonts for better typography */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+section#hot {
+  /*importing background image*/
+  background-image: url("hot.jpg");
+  background-size: cover;
+  margin: 0;
+  padding: 20px;
+}
+section#juice {
+  /*importing background image*/
+  background-image: url("juicy.jpg");
+  background-size: cover;
+  margin: 0;
+  padding: 20px;
+}
+section#cozy {
+  /*importing background image*/
+  background-image: url("cozy.jpg");
+  background-size: cover;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  background-color: rgba(48, 46, 46, 0.8);
+  color: darkred;
+  /*font size and bold text*/
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  font-family: "Poiret One", sans-serif;
+  /*  font-family: "Spirax", sans-serif;*/
+}
+
+h1 {
+  font-family: "Poiret One", sans-serif;
+  font-size: 2.5em;
+  margin: 0;
+}
+h2 {
+  font-family: "Poiret One", sans-serif;
+  font-weight: bold;
+  color: darkred;
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+nav {
+  padding: 10px;
+  text-align: center;
+}
+a {
+  color: darkred;
+  text-decoration: none;
+  font-family: "Spirax", sans-serif;
+  font-size: 1.2em;
+}
+
+/* align class lead_left to the left*/
+section .lead_left,
+.lead_right {
+  width: 100%;
+  padding: 0;
+  font-family: "Poiret One", sans-serif;
+  font-size: 1.2em;
+  background-color: darkred;
+  color: whitesmoke;
+}
+
+section .prices {
+  /* align text to the center*/
+  text-align: center;
+  font-family: "Poiret One", sans-serif;
+  font-size: 1.2em;
+  background-color: whitesmoke;
+  padding-inline: 2rem;
+  justify-content: space-between;
+  display: inline-block;
+
+  width: 45%;
+  margin: 0;
+}
+
+footer {
+  background-color: rgba(48, 46, 46, 0.8);
+  color: darkred;
+  text-align: center;
+  padding: 10px;
+  font-family: "Poiret One", sans-serif;
+}
