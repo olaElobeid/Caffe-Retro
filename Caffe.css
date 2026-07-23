@@ -1,93 +1,166 @@
-/* styling for Caffe web interface */
-/* importing Google Fonts for better typography */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #302e2e;
+  color: #1f1f1f;
+}
+
+.skip-link {
+  position: absolute;
+  top: -4rem;
+  left: 1rem;
+  z-index: 2;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  color: #760000;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
 
 section#hot {
-  /*importing background image*/
   background-image: url("hot.jpg");
-  background-size: cover;
-  margin: 0;
-  padding: 20px;
 }
+
 section#juice {
-  /*importing background image*/
   background-image: url("juicy.jpg");
-  background-size: cover;
-  margin: 0;
-  padding: 20px;
 }
+
 section#cozy {
-  /*importing background image*/
   background-image: url("cozy.jpg");
-  background-size: cover;
+}
+
+section {
+  min-height: 70vh;
   margin: 0;
-  padding: 20px;
+  padding: clamp(2rem, 7vw, 5rem) max(1rem, calc((100% - 70rem) / 2));
+  background-position: center;
+  background-size: cover;
+  scroll-margin-top: 5rem;
 }
 
 header {
-  background-color: rgba(48, 46, 46, 0.8);
-  color: darkred;
-  /*font size and bold text*/
-  font-size: 1.5em;
-  font-weight: bold;
-  padding: 20px;
-  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 0.75rem 1rem;
+  background-color: rgba(35, 32, 32, 0.96);
   font-family: "Poiret One", sans-serif;
-  /*  font-family: "Spirax", sans-serif;*/
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
 }
 
-h1 {
-  font-family: "Poiret One", sans-serif;
-  font-size: 2.5em;
-  margin: 0;
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1.5rem, 8vw, 5rem);
 }
-h2 {
-  font-family: "Poiret One", sans-serif;
-  font-weight: bold;
-  color: darkred;
-  font-size: 1.5em;
-  margin: 10px 0;
-}
-nav {
-  padding: 10px;
-  text-align: center;
-}
+
 a {
-  color: darkred;
-  text-decoration: none;
+  color: #fff;
   font-family: "Spirax", sans-serif;
-  font-size: 1.2em;
+  text-decoration: none;
 }
 
-/* align class lead_left to the left*/
-section .lead_left,
-.lead_right {
-  width: 100%;
-  padding: 0;
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+h2 {
+  margin: 0 0 1rem;
+  color: #760000;
   font-family: "Poiret One", sans-serif;
-  font-size: 1.2em;
-  background-color: darkred;
-  color: whitesmoke;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 1px 2px #fff;
+}
+
+section .lead-left,
+section .lead-right {
+  width: min(75%, 42rem);
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  background-color: rgba(100, 0, 0, 0.88);
+  color: #fff;
+  font-family: "Poiret One", sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: bold;
+}
+
+section .lead-right {
+  margin-left: auto;
 }
 
 section .prices {
-  /* align text to the center*/
-  text-align: center;
+  width: min(75%, 36rem);
+  margin: 1.5rem auto 0;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
   font-family: "Poiret One", sans-serif;
-  font-size: 1.2em;
-  background-color: whitesmoke;
-  padding-inline: 2rem;
-  justify-content: space-between;
-  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
 
-  width: 45%;
-  margin: 0;
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.row p {
+  margin: 0.35rem 0;
+}
+
+.row p:last-child {
+  flex: 0 0 auto;
 }
 
 footer {
-  background-color: rgba(48, 46, 46, 0.8);
-  color: darkred;
-  text-align: center;
-  padding: 10px;
+  margin: 0;
+  padding: 1.25rem 1rem;
+  background-color: #302e2e;
+  color: #fff;
   font-family: "Poiret One", sans-serif;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  header {
+    font-size: 1.25rem;
+  }
+
+  section {
+    min-height: auto;
+    padding-block: 3rem;
+  }
+
+  section .lead-left,
+  section .lead-right,
+  section .prices {
+    width: 100%;
+  }
+
+  section .lead-right {
+    margin-left: 0;
+  }
+
+  section .prices {
+    padding-inline: 1rem;
+  }
 }
